@@ -1,10 +1,10 @@
 import './style.css'
 import Header from '../../components/header'
-import { Container, Row, Col } from 'react-bootstrap';
 import search from '../../assets/search.svg'
 import location from '../../assets/location.svg'
 import union from '../../assets/union.svg'
 import PlantCard from '../../components/plantCard'
+import WeatherInfo from '../../components/weatherInfo';
 
 function Home() {
     return (
@@ -26,14 +26,14 @@ function Home() {
             </Container> */}
             <section>
 
-            
+            <WeatherInfo></WeatherInfo>
 
-                <div className='img__container'>
+                {/* <div className='img__container'>
                     <div className='blur__container'>
 
                         <div className='info-weather__container'></div>
                     </div>
-                </div>
+                </div> */}
               
                 <div className='cards-section'>
 
