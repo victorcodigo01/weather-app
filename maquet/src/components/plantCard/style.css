@@ -1,0 +1,57 @@
+.card-plant__container{
+    display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 308px;
+height: 486px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 1;
+border: none;
+
+}
+
+.card-img{
+    width: 308px;
+height: 450px;
+
+background: lightgrey;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: -40px 0px;
+}
+
+.card-text{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 308px;
+height: 76px;
+
+background: rgba(194, 60, 54, 0.35);
+backdrop-filter: blur(40px);
+/* Note: backdrop-filter has minimal browser support */
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
