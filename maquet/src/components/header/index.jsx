@@ -1,7 +1,6 @@
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Navbar, Nav} from 'react-bootstrap';
-import avatar from '../../assets/avatar.png'
 
 function Header() {
     return (

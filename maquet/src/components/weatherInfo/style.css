@@ -1,0 +1,138 @@
+.leaves-background__container {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 550px;
+    background: linear-gradient(0deg, rgba(122, 167, 73, 0.1), rgba(122, 167, 73, 0.1)), url('../../assets/pexels.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1rem 0rem;
+}
+
+.blur__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 8px;
+    width: 100%;
+    height: 80%;
+    background: rgba(29, 36, 37, 0.35);
+    backdrop-filter: blur(40px);
+}
+
+.info__container {
+    width: 75%;
+    height: 100%;
+}
+
+.main-weather-info__container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.weather-info__box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+}
+
+.img_background__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    border-radius: 40px;
+    /* background-color: #ffffff; */
+}
+
+.main-temp {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.city-name {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.range-temp__container {
+    display: flex;
+    gap: 16px;
+}
+
+.range-temp, .more-info__arrow{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.range-temp::before {
+    content:attr('../../');
+}
+
+.switch__container {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+.switch-units__container {
+    display: flex;
+    gap: 10px;
+}
+
+.time-info__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.extra-weather-info__container, .weekly-info__container {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.extra-weather-info__container--hidden {
+    display: none;
+}
+
+.extra-info__box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.week-day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.week-day img {
+    align-self: center;
+}
