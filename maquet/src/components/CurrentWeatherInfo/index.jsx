@@ -11,7 +11,8 @@ import Rainy from '../../../src/assets/10d.png';
 import Thunder from '../../../src/assets/11d.png';
 import Snow from '../../../src/assets/13d.png';
 import Fog from '../../../src/assets/50d.png';
-import Termometer from '../../../src/assets/Termometer.png';
+import TermOne from '../../../src/assets/ter1.svg';
+import TermTwo from '../../../src/assets/ter2.svg';
 import WeeklyForecast from '../weeklyForecast';
 import { Form } from 'react-bootstrap';
 
@@ -101,13 +102,13 @@ function CurrentWeatherInfo ({currentLocationWeather}) {
                             <div className='img_background__box'>
                                 <img src={getIcon(currentLocationWeather?.info?.current?.weather[0]?.description)} alt="weather-icon"/>
                             </div>
-                            <div>
+                            <div className='main-temp-res'>
                                 <p className='main-temp'>{isCelsius ? `${parseInt(currentLocationWeather?.info?.current?.temp)}ºC` : `${parseInt(((currentLocationWeather?.info?.current?.temp)*9/5)+32)}ºF`}</p>
                                 <p className='city-name'>{currentLocationWeather?.name}</p>
                                 <div className='range-temp__container'>
-                                    <img src={Termometer} alt="termometer-icon" />
+                                    <img src={TermOne} alt="termometer-icon" />
                                     <span className='range-temp'>{isCelsius ? `${parseInt(currentLocationWeather?.info?.daily[0]?.temp?.min)}ºC` : `${parseInt(((currentLocationWeather?.info?.daily[0]?.temp?.min)*9/5)+32)}ºF`}</span>
-                                    <img src={Termometer} alt="termometer-icon" />
+                                    <img src={TermTwo} alt="termometer-icon" />
                                     <span className='range-temp'>{isCelsius ? `${parseInt(currentLocationWeather?.info?.daily[0]?.temp.max)}ºC` : `${parseInt(((currentLocationWeather?.info?.daily[0]?.temp?.max)*9/5)+32)}ºF`}</span>
                                     {arrow ? <IoIosArrowDown onClick={handleOnClickDown} className='more-info__arrow'></IoIosArrowDown> : <IoIosArrowUp onClick={handleOnClickUp} className='more-info__arrow'></IoIosArrowUp>}
                                 </div>

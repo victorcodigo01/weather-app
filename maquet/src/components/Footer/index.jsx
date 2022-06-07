@@ -24,7 +24,7 @@ function Footer (){
                     <p className='text-gray'>Favoritos</p>
                 </div>
                 <div className='col3'>
-                    <h6 className='text-black'>RRSS</h6>
+                    <h6 className='text-black rr-ss'>RRSS</h6>
                     <p className='rrss'><img src={Facebook} alt="logo de Facebook" /></p>
                     <p className='rrss'><img src={Instagram} alt="Logo de Instagram" /></p>
                     <p className='rrss'><img src={Twitter} alt="logo de Twitter" /></p>

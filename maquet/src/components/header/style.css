@@ -21,14 +21,11 @@ background: #F1EEE7;
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 1.2px;
-
     color:  #3D5425;
-
 }
 
 .navs__container{
@@ -40,3 +37,10 @@ width: 431px;
 height: 46px;
 
 }
+
+.nav-item{
+    background-color: #F1EEE7; 
+}
+
+
+
