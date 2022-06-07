@@ -1,11 +1,12 @@
-import './style.css'
-import Header from '../../components/header'
-import search from '../../assets/search.svg'
-import location from '../../assets/location.svg'
-import union from '../../assets/union.svg'
-import PlantCard from '../../components/plantCard'
+import './style.css';
+import Header from '../../components/header';
+import Footer from '../../components/Footer';
+import search from '../../assets/search.svg';
+import location from '../../assets/location.svg';
+import union from '../../assets/union.svg';
+import PlantCard from '../../components/plantCard';
 import CurrentWeatherInfo from '../../components/CurrentWeatherInfo';
-import WeatherInfoByName from '../../components/WeatherInfoByName'
+import WeatherInfoByName from '../../components/WeatherInfoByName';
 import { useCurrentLocation, useCityWeatherByName} from '../../data/weather.hooks.js';
 import { useState } from 'react';
 
@@ -54,6 +55,7 @@ function Home() {
                     </section>
                 </div>
             </section>
+            <Footer></Footer>
             </>
             }
         </>

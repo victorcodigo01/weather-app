@@ -104,6 +104,7 @@
 .plants-section{
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .cards-section{
