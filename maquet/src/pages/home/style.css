@@ -108,9 +108,16 @@
     height: 259px;
 }
 
+.plants-section{
+    display: flex;
+    justify-content: center;
+}
+
 .cards-section{
 display: flex;
 flex-direction: column;
+gap: 30px;
+width: 984px;
 }
 
 .plants-title{
@@ -167,5 +174,6 @@ color: #BDD6A1;
 .cards__container{
 display: flex;
 flex-wrap: wrap;
-padding-top: 5rem;
+justify-content: center;
+gap: 30px;
 }

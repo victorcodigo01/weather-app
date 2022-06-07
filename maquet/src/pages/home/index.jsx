@@ -6,16 +6,15 @@ import union from '../../assets/union.svg'
 import PlantCard from '../../components/plantCard'
 import CurrentWeatherInfo from '../../components/CurrentWeatherInfo';
 import WeatherInfoByName from '../../components/WeatherInfoByName'
-import { useCurrentLocation, useCityWeatherByName, usePlantCard } from '../../data/weather.hooks.js';
+import { useCurrentLocation, useCityWeatherByName} from '../../data/weather.hooks.js';
 import { useState } from 'react';
 
 function Home() {
     const [inputValue, updateInputValue] = useState('')
-    const currentWeather = useCurrentLocation();
+    const {currentWeather, arrPlantsFiltered, filterPlantByName} = useCurrentLocation();
     const {cityWeatherByName, getCityByName} = useCityWeatherByName();
-    const [plantCards] = usePlantCard();
     const [isCurrentLocation, updateIsCurrentLocation] = useState(true)
-    console.log(plantCards)
+    // console.log(currentWeather)
     
     const showWeatherByName = () => {
         if(inputValue.length >=1){
@@ -31,9 +30,7 @@ function Home() {
     return (
         <>
             <Header></Header>
-            {/* <Container>
-                <Row>
-                    <Col> */}
+            
             <div className='input__container'>
                 <h1 className='welcome-title'>Bienvenido a tu zona cuidado</h1>
                 <div className='form__container'>
@@ -42,19 +39,19 @@ function Home() {
                     <button onClick={() => updateIsCurrentLocation(true)}><img src={location}></img></button>
                 </div>
             </div>
-                    {/* </Col>
-                </Row>
-            </Container> */}
+        
             {isCurrentLocation ? <CurrentWeatherInfo currentLocationWeather={currentWeather}></CurrentWeatherInfo> : <WeatherInfoByName cityWeatherByName={cityWeatherByName}></WeatherInfoByName>}
-            <section>
+           
+            <section className='plants-section'>
                 <div className='cards-section'>
                      <h1 className='plants-title' > Tus plantas</h1>
                     <div className='input-plants__container'>
                         <img className='union-icon' src={union} alt="" />
-                        <input className='input-plants' placeholder='Busca tus plantas'></input>
+                        <input className='input-plants' placeholder='Busca tus plantas' onChange={filterPlantByName}></input>
                     </div>
                     <section className='cards__container'>
-                    {plantCards?.map((c,i) => <PlantCard key={i} card={c}></PlantCard>)}
+                        {console.log(arrPlantsFiltered)}
+                    {arrPlantsFiltered?.map((c,i) => <PlantCard key={i} card={c} currentWeather={currentWeather}></PlantCard>)}
                     </section>
                 </div>
             </section>
