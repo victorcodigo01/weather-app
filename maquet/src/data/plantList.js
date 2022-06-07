@@ -35,7 +35,7 @@ export const arrPlants = [
         img: sansevieria,
         frio: 'Riego: Reducir la frecuencia de riego.',
         favorable: 'Riego: según las caracteristicas generales.',
-        calor: 'Riego: aumentar la frecuencia de riego,',
+        calor: 'Riego: aumentar la frecuencia de riego.',
         baja: 'Humedad: No favorece el crecimiento de tu planta.',
         alta: 'Humedad: Favorece el crecimiento de tu planta.',
         riego: 'Una vez cada quince días.',

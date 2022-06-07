@@ -1,6 +1,6 @@
 .main__container {
 height: 128px;
-background: #F8F9FA;
+background: #F1EEE7;
 }
 
 .nav__title{
@@ -11,9 +11,7 @@ background: #F8F9FA;
     font-weight: 700;
     font-size: 64px;
     line-height: 97px;
-  
     color: #7AA749;
-
     }
 
 .item-text {
@@ -29,7 +27,7 @@ background: #F8F9FA;
     text-align: center;
     letter-spacing: 1.2px;
 
-    color: #5C7D37;
+    color:  #3D5425;
 
 }
 

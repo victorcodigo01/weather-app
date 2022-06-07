@@ -32,7 +32,7 @@ function Home() {
             <Header></Header>
             
             <div className='input__container'>
-                <h1 className='welcome-title'>Bienvenido a tu zona cuidado</h1>
+                <h1 className='welcome-title'>Bienvenido a <span className='tu-zona'>tu zona</span> de cuidado</h1>
                 <div className='form__container'>
                     <input onChange={e => updateInputValue(e.target.value)} value={inputValue} className='input-box' placeholder='Localización'></input>
                     <button onClick={showWeatherByName}><img src={search}></img></button>
