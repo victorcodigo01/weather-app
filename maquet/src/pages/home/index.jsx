@@ -5,6 +5,7 @@ import location from '../../assets/location.svg'
 import union from '../../assets/union.svg'
 import PlantCard from '../../components/plantCard'
 import WeatherInfo from '../../components/weatherInfo';
+import Footer from '../../components/footer';
 
 function Home() {
     return (
@@ -48,6 +49,7 @@ function Home() {
                     <PlantCard></PlantCard>
                     </section>
                 </div>
+                <Footer></Footer>
                
             </section>
         </>
