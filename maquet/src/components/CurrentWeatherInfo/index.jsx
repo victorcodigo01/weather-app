@@ -39,7 +39,7 @@ function CurrentWeatherInfo ({currentLocationWeather}) {
                             </div>
                             <div>
                                 <p className='main-temp'>{isCelsius ? `${parseInt(currentLocationWeather?.currentLocation?.info?.current?.temp)}ºC` : `${parseInt(((currentLocationWeather?.currentLocation?.info?.current?.temp)*9/5)+32)}ºF`}</p>
-                                <p className='city-name'>{currentLocationWeather.currentLocation.name}</p>
+                                <p className='city-name'>{currentLocationWeather?.currentLocation.name}</p>
                                 <div className='range-temp__container'>
                                     <img src={Termometer} alt="termometer-icon" />
                                     <span className='range-temp'>{isCelsius ? `${parseInt(currentLocationWeather?.currentLocation?.info?.daily[0]?.temp?.min)}ºC` : `${parseInt(((currentLocationWeather?.currentLocation?.info?.daily[0]?.temp?.min)*9/5)+32)}ºF`}</span>

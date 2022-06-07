@@ -1,4 +1,3 @@
-
 import { apiKey } from "../config.js";
 
 export const getCurrentLocationName = async (latitude, longitude) => {
