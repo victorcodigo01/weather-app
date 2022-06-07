@@ -15,7 +15,7 @@ function Home() {
     const {cityWeatherByName, getCityByName} = useCityWeatherByName();
     const [plantCards] = usePlantCard();
     const [isCurrentLocation, updateIsCurrentLocation] = useState(true)
-    console.log(plantCards)
+    console.log(currentWeather)
     
     const showWeatherByName = () => {
         if(inputValue.length >=1){

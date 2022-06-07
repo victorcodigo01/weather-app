@@ -17,14 +17,24 @@ import { Form } from 'react-bootstrap';
 function CurrentWeatherInfo ({currentLocationWeather}) {
     const [showExtraInfo, updateShowExtraInfo] = useState(false);
     const [isCelsius, updateIsCelsius] = useState(true);
-    const [date, updateDate] = useState('');
 
-    // switch(currentLocationWeather?.currentLocation?.info?.current?.weather[0].icon){
-    //     case ''
-    // }
+//     const getTime = dt => {
+//        const d = new Date(dt);
+//        console.log(dt)
+//        const options = { hour: 'numeric', minute: 'numeric'};
+//        const f = new Intl.DateTimeFormat('es-ES', options)
+//        console.log(d)
+//        return f.format(d).toUpperCase()
+//    }
 
-    // const options = { weekday: 'long'};
-    // const currentDate = new Intl.DateTimeFormat('es-ES', options)
+//    const getFullDate = dt => {
+//     const d = new Date(dt);
+//     console.log(dt)
+//     const options = { year: 'numeric', month: 'numeric', day: 'numeric',
+//     hour: 'numeric', minute: 'numeric'};
+//     const f = new Intl.DateTimeFormat('es-ES', options)
+//     return f.format(d)
+// }
 
     // `https://openweathermap.org/img/wn/${currentLocationWeather?.currentLocation?.info?.current?.weather[0].icon}@2x.png`
 
@@ -63,8 +73,7 @@ function CurrentWeatherInfo ({currentLocationWeather}) {
                             </div>
                         </section>
                         <section className='time-info__box'>
-                            <p>currentDate</p>
-                            {/* <p>20:16</p> */}
+                            {/* <p>{getFullDate(currentLocationWeather?.currentLocation?.info?.current?.dt*1000)}</p> */}
                         </section>
                     </section>
                     <section className={showExtraInfo ? 'extra-weather-info__container' : 'extra-weather-info__container--hidden'}>
@@ -77,8 +86,8 @@ function CurrentWeatherInfo ({currentLocationWeather}) {
                             <p>{`Velocidad del viento ${currentLocationWeather?.currentLocation?.info?.current?.wind_speed} m/s`}</p>
                         </div>
                         <div className='extra-info__box'>
-                            <p>{`Amanecer ${currentLocationWeather?.currentLocation?.info?.current?.sunrise}h`}</p>
-                            <p>{`Puesta de sol ${currentLocationWeather?.currentLocation?.info?.current?.sunset}h`}</p>
+                            {/* <p>{`Amanecer  ${getTime(currentLocationWeather?.currentLocation?.info?.current?.sunrise*1000)}`}</p>
+                            <p>{`Puesta de sol  ${getTime(currentLocationWeather?.currentLocation?.info?.current?.sunset*1000)}`}</p> */}
                         </div>
                     </section>
                     <section className='weekly-info__container'>

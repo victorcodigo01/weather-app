@@ -8,12 +8,22 @@ import { Form } from 'react-bootstrap';
 function WeatherInfoByName ({cityWeatherByName}) {
     const [showExtraInfo, updateShowExtraInfo] = useState(false);
     const [isCelsius, updateIsCelsius] = useState(true);
-    const [date, updateDate] = useState('');
 
-    // const currentDate = new Date().getDay();
+    
+    // const getTime = dt => {
+    //     const d = new Date(dt);
+    //     const options = { hour: 'numeric', minute: 'numeric'};
+    //     const f = new Intl.DateTimeFormat('es-ES', options)
+    //     return f.format(d).toUpperCase()
+    // }
 
-    // const options = { weekday: 'long'};
-    // const currentDate = new Date.getDay('es-ES', options);
+    // const getFullDate = dt => {
+    //     const d = new Date(dt);
+    //     const options = { year: 'numeric', month: 'numeric', day: 'numeric',
+    //     hour: 'numeric', minute: 'numeric'};
+    //     const f = new Intl.DateTimeFormat('es-ES', options)
+    //     return f.format(d)
+    // }
 
     return (
         <main className='leaves-background__container'>
@@ -50,8 +60,7 @@ function WeatherInfoByName ({cityWeatherByName}) {
                             </div>
                         </section>
                         <section className='time-info__box'>
-                            <p>currentDate</p>
-                            {/* <p>20:16</p> */}
+                            {/* <p>{getFullDate(cityWeatherByName?.info?.current?.dt*1000)}</p> */}
                         </section>
                     </section>
                     <section className={showExtraInfo ? 'extra-weather-info__container' : 'extra-weather-info__container--hidden'}>
@@ -64,8 +73,8 @@ function WeatherInfoByName ({cityWeatherByName}) {
                             <p>{`Velocidad del viento ${cityWeatherByName?.info?.current?.wind_speed} m/s`}</p>
                         </div>
                         <div className='extra-info__box'>
-                            <p>{`Amanecer ${cityWeatherByName?.info?.current?.sunrise}h`}</p>
-                            <p>{`Puesta de sol ${cityWeatherByName?.info?.current?.sunset}h`}</p>
+                            {/* <p>{`Amanecer ${getTime(cityWeatherByName?.info?.current?.sunrise*1000)}`}</p>
+                            <p>{`Puesta de sol ${getTime(cityWeatherByName?.info?.current?.sunset*1000)}`}</p> */}
                         </div>
                     </section>
                     <section className='weekly-info__container'>
