@@ -6,15 +6,16 @@ import union from '../../assets/union.svg'
 import PlantCard from '../../components/plantCard'
 import CurrentWeatherInfo from '../../components/CurrentWeatherInfo';
 import WeatherInfoByName from '../../components/WeatherInfoByName'
-import { useCurrentLocation, useCityWeatherByName } from '../../data/weather.hooks.js';
+import { useCurrentLocation, useCityWeatherByName, usePlantCard } from '../../data/weather.hooks.js';
 import { useState } from 'react';
 
 function Home() {
     const [inputValue, updateInputValue] = useState('')
     const currentWeather = useCurrentLocation();
     const {cityWeatherByName, getCityByName} = useCityWeatherByName();
+    const [plantCards] = usePlantCard();
     const [isCurrentLocation, updateIsCurrentLocation] = useState(true)
-    console.log(currentWeather)
+    console.log(plantCards)
     
     const showWeatherByName = () => {
         if(inputValue.length >=1){
@@ -53,7 +54,7 @@ function Home() {
                         <input className='input-plants' placeholder='Busca tus plantas'></input>
                     </div>
                     <section className='cards__container'>
-                    <PlantCard></PlantCard>
+                    {plantCards?.map((c,i) => <PlantCard key={i} card={c}></PlantCard>)}
                     </section>
                 </div>
             </section>
