@@ -2,6 +2,17 @@ import './style.css'
 import mas from '../../assets/mas.svg'
 
 function PlantCard({card, currentWeather}) {
+    
+    const irrigateByTemp = temp => {
+        if(temp <= 10) {
+            return card.frio
+        }else if (temp > 10 && temp <= 25) {
+            return card.favorable
+        }else {
+            return card.calor
+        }
+    }
+    
     return (
 
         <>
@@ -25,8 +36,8 @@ function PlantCard({card, currentWeather}) {
 
                         <section className='dinamic-text'>
                             <h1 className='section-title'>Información en tiempo real</h1>
-                            <p>Riego</p>
-                            <p>Humedad</p>
+                            <p>{irrigateByTemp(currentWeather?.info?.current?.temp)}</p>
+                            <p>{currentWeather?.info?.current?.humidity > 50 ? card.alta : card.baja}</p>
                         </section>
 
                         <section className='fixed-text'>
@@ -34,7 +45,7 @@ function PlantCard({card, currentWeather}) {
                             <p>{card.riego}</p>
                             <p>Humedad: {card.hum_min}% - {card.hum_max}%</p>
                             <p>Temperatura: {card.temp_minC}ºC - {card.temp_maxC}ºC </p>
-                            <p> <img src={mas} alt="" /> Información</p>
+                            <p> <img src={mas} alt="plus-icon" /> Información</p>
                         </section>
                     </article>
 

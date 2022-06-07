@@ -11,10 +11,10 @@ import { useState } from 'react';
 
 function Home() {
     const [inputValue, updateInputValue] = useState('')
-    const {currentWeather, arrPlantsFiltered, filterPlantByName} = useCurrentLocation();
+    const {currentLocation, arrPlantsFiltered, filterPlantByName} = useCurrentLocation();
     const {cityWeatherByName, getCityByName} = useCityWeatherByName();
     const [isCurrentLocation, updateIsCurrentLocation] = useState(true)
-    // console.log(currentWeather)
+    console.log(currentLocation)
     
     const showWeatherByName = () => {
         if(inputValue.length >=1){
@@ -40,7 +40,7 @@ function Home() {
                 </div>
             </div>
         
-            {isCurrentLocation ? <CurrentWeatherInfo currentLocationWeather={currentWeather}></CurrentWeatherInfo> : <WeatherInfoByName cityWeatherByName={cityWeatherByName}></WeatherInfoByName>}
+            {isCurrentLocation ? <CurrentWeatherInfo currentLocationWeather={currentLocation}></CurrentWeatherInfo> : <WeatherInfoByName cityWeatherByName={cityWeatherByName}></WeatherInfoByName>}
            
             <section className='plants-section'>
                 <div className='cards-section'>
@@ -50,8 +50,7 @@ function Home() {
                         <input className='input-plants' placeholder='Busca tus plantas' onChange={filterPlantByName}></input>
                     </div>
                     <section className='cards__container'>
-                        {console.log(arrPlantsFiltered)}
-                    {arrPlantsFiltered?.map((c,i) => <PlantCard key={i} card={c} currentWeather={currentWeather}></PlantCard>)}
+                    {arrPlantsFiltered?.map((c,i) => <PlantCard key={i} card={c} currentWeather={isCurrentLocation ? currentLocation : cityWeatherByName}></PlantCard>)}
                     </section>
                 </div>
             </section>

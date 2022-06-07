@@ -1,6 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import Sun from '../../../src/assets/01d.png';
+import PartialCloudy from '../../../src/assets/02d.png';
+import Cloudy from '../../../src/assets/03d.png';
+import MostlyCloudy from '../../../src/assets/04d.png';
+import HeavyRain from '../../../src/assets/09d.png';
+import Rainy from '../../../src/assets/10d.png';
+import Thunder from '../../../src/assets/11d.png';
+import Snow from '../../../src/assets/13d.png';
+import Fog from '../../../src/assets/50d.png';
 import Termometer from '../../../src/assets/Termometer.png';
 import WeeklyForecast from '../weeklyForecast';
 import { Form } from 'react-bootstrap';
@@ -8,7 +16,6 @@ import { Form } from 'react-bootstrap';
 function WeatherInfoByName ({cityWeatherByName}) {
     const [showExtraInfo, updateShowExtraInfo] = useState(false);
     const [isCelsius, updateIsCelsius] = useState(true);
-
     
     // const getTime = dt => {
     //     const d = new Date(dt);
@@ -24,6 +31,30 @@ function WeatherInfoByName ({cityWeatherByName}) {
     //     const f = new Intl.DateTimeFormat('es-ES', options)
     //     return f.format(d)
     // }
+    
+
+    const getIcon = (w) => {
+        if(w === 'clear sky') {
+            return Sun;
+        }else if(w === 'few clouds') {
+            return PartialCloudy;
+        }else if(w === 'scattered clouds') {
+            return Cloudy;
+        }else if(w === 'broken clouds') {
+            return MostlyCloudy;
+        }else if(w === 'shower rain') {
+            return HeavyRain;
+        }else if(w === 'rain') {
+            return Rainy;
+        }else if(w === 'thunderstorm') {
+            return Thunder;
+        }else if(w === 'snow') {
+            return Snow;
+        }else {
+            return Fog
+        }
+    }
+   
 
     return (
         <main className='leaves-background__container'>
@@ -32,7 +63,7 @@ function WeatherInfoByName ({cityWeatherByName}) {
                     <section className='main-weather-info__container'>
                         <section className='weather-info__box'>
                             <div className='img_background__box'>
-                                <img src={Sun} alt="weather-icon"/>
+                                <img src={getIcon(cityWeatherByName?.info?.current?.weather[0]?.description)} alt="weather-icon"/>
                             </div>
                             <div>
                                 <p className='main-temp'>{isCelsius ? `${parseInt(cityWeatherByName?.info?.current?.temp)}ºC` : `${parseInt(((cityWeatherByName?.info?.current?.temp)*9/5)+32)}ºF`}</p>
