@@ -14,7 +14,6 @@ function Home() {
     const {currentLocation, arrPlantsFiltered, filterPlantByName} = useCurrentLocation();
     const {cityWeatherByName, getCityByName} = useCityWeatherByName();
     const [isCurrentLocation, updateIsCurrentLocation] = useState(true)
-    console.log(currentLocation)
     
     const showWeatherByName = () => {
         if(inputValue.length >=1){
@@ -24,12 +23,13 @@ function Home() {
         }else{
             console.log('Input vacío, no se puede mostrar ninguna ciudad');
         }
-        
     }
 
     return (
         <>
-            <Header></Header>
+        { (Object.keys(currentLocation).length === 0) && (Object.keys(cityWeatherByName).length === 0) ? " cargandoooo" :
+        <>
+        <Header></Header>
             
             <div className='input__container'>
                 <h1 className='welcome-title'>Bienvenido a <span className='tu-zona'>tu zona</span> de cuidado</h1>
@@ -54,6 +54,8 @@ function Home() {
                     </section>
                 </div>
             </section>
+            </>
+            }
         </>
     )
 }
