@@ -12,7 +12,6 @@ import Fogs from '../../assets/132.svg'
 
 
 function WeeklyForecast ({forecast, isCelsius}) {
-    console.log(forecast)
 
     const getIconSmall = (w) => {
         if(w === 'Clear') {
@@ -43,7 +42,7 @@ function WeeklyForecast ({forecast, isCelsius}) {
         <section className='weekly-info__container'>
             <section className='week-day'>
                 <img src={getIconSmall(forecast?.weather[0]?.main)} alt="week-day-weather-icon" />
-                <p>{isCelsius ? `${parseInt(forecast.temp.min)}ºC` : `${parseInt(((forecast.temp.min)*9/5)+32)}ºF`} - {isCelsius ? `${parseInt(forecast.temp.max)}ºC` : `${parseInt(((forecast.temp.max)*9/5)+32)}ºF`}</p>
+                <p className='temp'>{isCelsius ? `${parseInt(forecast.temp.min)}ºC` : `${parseInt(((forecast.temp.min)*9/5)+32)}ºF`} - {isCelsius ? `${parseInt(forecast.temp.max)}ºC` : `${parseInt(((forecast.temp.max)*9/5)+32)}ºF`}</p>
                 <p>{getDay(forecast.dt*1000)}</p>
             </section>
         </section>

@@ -38,6 +38,7 @@ export const useCurrentLocation = () => {
   
   
       const getCoordsByName = async city => {
+          
           const {lon, lat} = await getCityWeatherByName(city);
           const cityInfo = await getCityWeather(lat, lon);
           const cityName = await getCurrentLocationName(lat, lon);

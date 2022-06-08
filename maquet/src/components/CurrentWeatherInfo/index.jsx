@@ -28,10 +28,8 @@ function CurrentWeatherInfo ({currentLocationWeather}) {
     useEffect(() => {
         const getTime = dt => {
             const d = new Date(dt);
-            console.log(dt)
             const options = { hour: 'numeric', minute: 'numeric'};
             const f = new Intl.DateTimeFormat('es-ES', options)
-            console.log(d)
             updateSunrise(f.format(d))
         }
         getTime(currentLocationWeather?.info?.current?.sunrise*1000);
@@ -49,7 +47,6 @@ function CurrentWeatherInfo ({currentLocationWeather}) {
 
         const getFullDate = dt => {
             const d = new Date(dt);
-            console.log(dt)
             const options = { year: 'numeric', month: 'numeric', day: 'numeric',
             hour: 'numeric', minute: 'numeric'};
             const f = new Intl.DateTimeFormat('es-ES', options)

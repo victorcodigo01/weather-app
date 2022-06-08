@@ -111,7 +111,7 @@
     width: 100%;
     height: 25%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -145,11 +145,12 @@
     }
 
     .img_background__box img{
-        width: 11rem;
+        width: 9rem;
     }
 
     .info__container{
         width: 90%;
+
     }
 
     .main-weather-info__container {
@@ -161,31 +162,33 @@
     }
 
     .img_background__box{
-
+        margin-right: 20px;
     }
 
     .main-temp {
         font-weight: 700;
-        font-size: 32px;
+        font-size: 1.6rem;
     }
 
     .city-name {
         font-weight: 400;
-        font-size: 32px;
+        font-size: 1rem;
+        color: #ffffffc1;
     }
 
     .range-temp__container {
         font-weight: 400;
-        font-size: 16px;
+        color: #ffffffc1;
     }
 
     .range-temp, .more-info__arrow{
-    
+        font-size: 1.1rem;
+        color: #ffffffc1;
     }
 
     .switch__container {
     width: 39px;
-    height: 15px;
+    height: 10px;
     position: absolute;
     right: 7rem;
     top: -0.6rem;
@@ -193,11 +196,13 @@
 
     .switch-units__container {
         font-weight: 400;
-        font-size: 8px;
+        font-size: 0.6rem;
+        display: flex;
+        justify-content: center;
     }
 
     .time-info__box {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 13px;
     position: absolute;
     right: 1rem;
@@ -206,12 +211,15 @@
     }
 
     .extra-weather-info__container {
-    
+        display: flex;
+        
     }
 
     .extra-info__box {
         font-size: 10px;
-        font-weight: 200; 
+        font-weight: 200;
+        margin: 0px 10px; 
+        color: #ffffffc1;
     }
 
     .weekly-info__container {

@@ -28,7 +28,7 @@ function Home() {
 
     return (
         <>
-        { (Object.keys(currentLocation).length === 0) && (Object.keys(cityWeatherByName).length === 0) ? " cargandoooo" :
+        {(isCurrentLocation && Object.keys(currentLocation).length === 0) || (!isCurrentLocation && Object.keys(cityWeatherByName).length === 0) ? "" :
         <>
         <Header></Header>
             
