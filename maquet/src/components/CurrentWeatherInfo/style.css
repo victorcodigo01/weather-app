@@ -137,3 +137,88 @@
     padding-bottom: 100px;
     margin-top: 30px;
 }
+
+@media screen and (width:360px) {
+
+    .leaves-background__container{
+        height: 450px;
+    }
+
+    .img_background__box img{
+        width: 11rem;
+    }
+
+    .info__container{
+        width: 90%;
+    }
+
+    .main-weather-info__container {
+        
+    }
+    
+    .weather-info__box {
+ 
+    }
+
+    .img_background__box{
+
+    }
+
+    .main-temp {
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    .city-name {
+        font-weight: 400;
+        font-size: 32px;
+    }
+
+    .range-temp__container {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .range-temp, .more-info__arrow{
+    
+    }
+
+    .switch__container {
+    width: 39px;
+    height: 15px;
+    position: absolute;
+    right: 7rem;
+    top: -0.6rem;
+    }
+
+    .switch-units__container {
+        font-weight: 400;
+        font-size: 8px;
+    }
+
+    .time-info__box {
+    font-weight: 700;
+    font-size: 13px;
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    width: 50px;
+    }
+
+    .extra-weather-info__container {
+    
+    }
+
+    .extra-info__box {
+        font-size: 10px;
+        font-weight: 200; 
+    }
+
+    .weekly-info__container {
+
+    }
+
+    .main-temp-res{
+        margin-top: 1.3rem;
+    }
+}

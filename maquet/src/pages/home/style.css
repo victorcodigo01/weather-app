@@ -115,7 +115,6 @@ width: 984px;
 }
 
 .plants-title{
-    height: 92px;
     left: 472px;
     top: 980px;
     font-family: 'Lora';
@@ -171,4 +170,31 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 30px;
+}
+
+@media screen and (width:360px) {
+    .input__container{
+        margin-top: 2rem;
+    }
+
+    .welcome-title{
+        font-size: 30px;
+    }
+
+    .form__container{
+        width: 90%;
+    }
+
+    .plants-title{
+        font-size: 30px;
+    }
+
+    .input-plants{
+        display: flex;
+        align-self: center;
+    }
+
+    .union-icon{
+        padding-right: 2rem;
+    }
 }
