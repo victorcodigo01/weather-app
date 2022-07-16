@@ -27,12 +27,3 @@ export const getCityWeatherByName = async cityName => {
     
         return {lon, lat};
 };
-
-
-// export const getCityWeatherFarenheit = async (latitude, longitude) => {
-
-//     const r = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly&appid=${apiKey}&units=imperial`);
-//     const data = await r.json();
-
-//     return data;
-// };
